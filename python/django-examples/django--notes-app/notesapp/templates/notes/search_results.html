@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+<h1>Search Results</h1>
+
+{% block content %}
+{% for result in results %}
+<p><em>Title: </em>{{ result.note_title }}</p>
+<p>{{ result.note_body }}</p>
+<hr />
+{% endfor %}
+{% endblock %}

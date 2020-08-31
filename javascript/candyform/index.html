@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Add a candy!</title>
+    <script src="main.js" defer></script>
+</head>
+<body> 
+    <header>
+        <h1>Add to our growing dictionary of candies!</h1>
+        <nav>
+            <a href="#" id="add-candy-nav-button">Add a Candy</a>
+            <a href="#" id="search-candy-nav-button">Search Candies</a>
+            <a href="#" id="browse-candy-nav-button">Browse Candies</a>
+        </nav>
+    </header>
+    <main>
+        <section id="add-candy-section">
+        <p>Fill out this form and we'll add the candy you describe to our database (if it doesn't already exist).</p>
+        <form id="candy-form">
+            <div>
+                <label for="candy-name">Enter the candy name</label>
+                <input type="text" name="candy-name" id="candy-name" required>
+            </div>
+            <div>
+                <label for="candy-calories">Enter the candy's calorie count</label>
+                <input type="number" name="candy-calories" min="0" max="10000000" id="candy-calories">
+            </div>
+            <div>
+                <label for="candy-type">What type is this candy?</label>
+                <select name="candy-type" id="candy-type">
+                    <option value="chocolate">chocolate</option>
+                    <option value="hard">hard</option>
+                    <option value="sour">sour</option>
+                    <option value="gummy">gummy</option>
+                </select>
+            </div>
+            <div>
+            <input type="submit" value="submit this information">
+            </div>
+        </form>
+    </section>
+    <section id="candy-search-section" class="hidden">
+        <p>Search our large database of candies!</p>
+        <form id="candy-search-form">
+            <div>
+                <label for="candy-name">Search for candies by name</label>
+                <input type="text" name="candy-name" id="search-candy-name">
+            </div>
+            <div>
+            <input type="submit" value="search for candies">
+            </div>
+        </form>
+    </section>
+    <section id="browse-candy-section" class="hidden">
+    </section>
+    </main>
+</body>
+</html>

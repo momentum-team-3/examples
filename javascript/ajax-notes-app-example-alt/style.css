@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+}
+
+header {
+    background-color: #555555;
+    padding: 15px;
+}
+
+header h2 {
+    color: white;
+    font-weight: bold;
+}
+
+textarea {
+    border: 1px solid black;
+    border-radius: 10px;
+    background: none;
+    resize: none;
+}
+
+button {
+    text-align: center;
+    background-color: #555555;
+    border: none;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea[disabled] {
+    border: 1px dashed #555555;
+    color: black;
+}
+
+#view-notes-section h3 {
+    padding: 15px;
+}
+
+#content-hook {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 15px;
+}
+
+#content-hook  > * {
+    flex: 0 0 auto;
+}
+
+#note-nil {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#note-nil > button {
+    flex: 0 0 auto;
+    font-size: 100px;
+    font-weight: bold;
+    width: 320px;
+    height: 320px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px dashed black;
+    
+}
+
+#note-nil > button::before {
+    content:"+";
+}
+
+#note-nil > button:hover::before {
+    content:"add note";
+}
+
+.note {
+    display: grid;
+    width: 400px;
+    height: 400px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 10% 10% 50% 10%;
+    grid-template-areas:
+	"title-label title-label . ."
+	"title title title title"
+	"body-label body-label . ."
+	"body body body body"
+    "button-1 button-2 . .";
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.note > * {
+    padding: 10px;
+}
+
+.note > button {
+    place-self: center;
+    width: 100%;
+}
+
+.note label[for*="title"] {
+    grid-area: title-label;
+}
+
+.note label[for*="body"] {
+    grid-area: body-label;
+}
+
+.note textarea[id*="title"] {
+    grid-area: title;
+}
+
+.note textarea[id*="body"] {
+    grid-area: body;
+}
+
+.note .submit-edits-button {
+    grid-area: button-1;
+}
+
+.note .cancel-edits-button {
+    grid-area: button-2;
+}
+
+.note .edit-button {
+    grid-area: button-1;
+}
+
+.note .delete-button {
+    grid-area: button-2;
+}
+
+.display-mode .submit-edits-button {
+    display: none;
+}
+
+.display-mode label {
+    display: none;
+}
+
+.display-mode .cancel-edits-button {
+    display: none;
+} 
+
+.edit-mode .edit-button {
+    display: none;
+
+}
+
+.edit-mode .delete-button {
+    display: none;
+}

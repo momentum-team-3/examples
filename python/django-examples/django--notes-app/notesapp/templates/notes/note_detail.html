@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ object.note_title }}</h1>
+    <p>{{ object.note_body }}</p>
+    <p>({{ object.date_created }})</p>
+    <p><a href="{% url 'notes_update' object.pk %}">edit</a></p>
+    <p><a href="{% url 'notes_delete' object.pk %}">delete</a></p>
+{% endblock %}

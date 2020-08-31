@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Little Planet</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <main>
+    <canvas width="1000px" height="1000px" id="canvas"></canvas>
+    <div id="controls">
+      <button onclick="runGame()">Play!</button>
+      <button onclick="window.clearInterval(mainLoopID)">Quit!</button>
+  </div>
+  </main>
+  <script src="util.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

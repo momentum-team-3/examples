@@ -1,0 +1,53 @@
+header {
+    background-color: pink;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+
+#candy-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden * {
+    display: none;
+}
+
+#browse-candy-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-between;
+}
+
+#browse-candy-section > * {
+    flex: 0 0 auto;
+    margin: 5px;
+    padding: 10px;
+    width: 250px;
+    height: auto;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dl {
+    border-radius: 5px;
+    border: 1px dashed pink;
+}

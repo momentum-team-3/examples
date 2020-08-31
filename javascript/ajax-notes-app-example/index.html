@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Notes</title>
+</head>
+<body>
+  <nav>
+    <a href="#" class="top-button" id="create-note-nav-button" onclick="showCreateNote()">New Note</a>
+    <a href="#" class="top-button" id="view-notes-nav-button">View Notes</a>
+  </nav>
+  <main>
+  <section id="create-note-section" class="hidden">
+  <h3>Create a New Note</h3>
+	<label for="create-note-title">Note title</label>
+	<input type="text" id="create-note-title" name="create-note-title" required>
+	<label for="create-note-body">Note body</label>
+	<textarea name="create-note-body" id="create-note-body" required></textarea>
+	<button onclick="addNote()">add note</button>
+    </section>
+    <section id="view-notes-section">
+      <h3>Your Notes</h3>
+      <div id="content-hook"></div>
+    </section>
+  </main>
+</body>
+</html>

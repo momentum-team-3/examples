@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+textarea {
+    border: 1px solid black;
+    border-radius: 10px;
+    background: none;
+    resize: none;
+}
+
+button {
+    text-align: center;
+    background-color: #555555;
+    border: none;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea[disabled] {
+    border: 1px dashed #555555;
+    color: black;
+}
+
+nav {
+    background-color: #555555;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+nav a:hover {
+    color: #555555;
+    background-color: white;
+    font-weight: bold;
+}
+
+#create-note-section {
+    display: grid;
+    width: 400px;
+    height: 400px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 10% 10% 80% 10%;
+    grid-template-areas:
+    "header header"
+    "title-label title-field"
+    "body-label body-field"
+    "submit-button .";
+    margin: 10px;
+    column-gap: 5px;
+    row-gap: 5px;   
+}
+
+#create-note-section.hidden {
+    display: none;
+}
+
+#create-note-section h3 {
+    grid-area: header;
+}
+
+#create-note-section label[for="create-note-title"] {
+    grid-area: title-label;
+    place-self: center;
+}
+
+#create-note-title {
+    grid-area: title-field;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+#create-note-section label[for="create-note-body"] {
+    grid-area: body-label;
+    place-self: center;
+}
+
+#create-note-body {
+    grid-area: body-field;
+}
+
+#create-note-section button {
+    grid-area: submit-button;
+}
+
+#view-notes-section h3 {
+    padding: 15px;
+}
+
+#content-hook {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 15px;
+}
+
+#content-hook  > * {
+    flex: 0 0 auto;
+}
+
+.note {
+    display: grid;
+    width: 400px;
+    height: 400px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 10% 10% 50% 10%;
+    grid-template-areas:
+	"title-label title-label . ."
+	"title title title title"
+	"body-label body-label . ."
+	"body body body body"
+    "button-1 button-2 . .";
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.note > * {
+    padding: 10px;
+}
+
+.note > button {
+    place-self: center;
+    width: 100%;
+}
+
+.note label[for*="title"] {
+    grid-area: title-label;
+}
+
+.note label[for*="body"] {
+    grid-area: body-label;
+}
+
+.note textarea[id*="title"] {
+    grid-area: title;
+}
+
+.note textarea[id*="body"] {
+    grid-area: body;
+}
+
+.note .submit-edits-button {
+    grid-area: button-1;
+}
+
+.note .cancel-edits-button {
+    grid-area: button-2;
+}
+
+.note .edit-button {
+    grid-area: button-1;
+}
+
+.note .delete-button {
+    grid-area: button-2;
+}
+
+.display-mode .submit-edits-button {
+    display: none;
+}
+
+.display-mode label {
+    display: none;
+}
+
+.display-mode .cancel-edits-button {
+    display: none;
+} 
+
+.edit-mode .edit-button {
+    display: none;
+
+}
+
+.edit-mode .delete-button {
+    display: none;
+}
